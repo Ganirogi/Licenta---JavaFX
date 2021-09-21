@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="336.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegisterController">
+   <children>
+      <TextField fx:id="tfFirstName" layoutX="266.0" layoutY="47.0" />
+      <TextField fx:id="tfLastName" layoutX="266.0" layoutY="84.0" />
+      <TextField fx:id="tfUsername" layoutX="266.0" layoutY="123.0" />
+      <PasswordField fx:id="pfPassword" layoutX="266.0" layoutY="162.0" />
+      <PasswordField fx:id="pfConfirmPassword" layoutX="266.0" layoutY="201.0" />
+      <Label layoutX="134.0" layoutY="51.0" text="First Name*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="88.0" text="Last Name*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="127.0" text="Username*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="164.0" text="Password*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="203.0" text="Confirm Password*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfRole" layoutX="266.0" layoutY="237.0" />
+      <Label layoutX="142.0" layoutY="240.0" text="Role*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="137.0" layoutY="300.0" mnemonicParsing="false" onAction="#RegisterData" text="Register" AnchorPane.leftAnchor="137.0" />
+      <Button fx:id="bBackR" layoutX="319.0" layoutY="300.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="25.0" prefWidth="60.0" text="Back" AnchorPane.rightAnchor="161.0" />
+      <Label layoutX="270.0" layoutY="23.0" prefHeight="17.0" prefWidth="142.0" text="Fields with * are required" />
+      <CheckBox fx:id="cbPswCheck" layoutX="425.0" layoutY="205.0" mnemonicParsing="false" text="Psw check" />
+      <Circle fx:id="cChecker" fill="#dd0707" layoutX="430.0" layoutY="137.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

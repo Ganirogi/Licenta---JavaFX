@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ScheduleController">
+   <children>
+      <Button layoutX="698.0" layoutY="14.0" mnemonicParsing="false" onAction="#getHistorySchedule" text="History" />
+      <Button cancelButton="true" layoutX="615.0" layoutY="536.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
+      <Button layoutX="76.0" layoutY="536.0" mnemonicParsing="false" onAction="#goToRequestModification" text="Ask modification" />
+      <TableView fx:id="tableSchedule" layoutY="56.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0">
+        <columns>
+        <TableColumn fx:id="col_week" prefWidth="100.0" text="FirstDayofWeek" />
+          <TableColumn fx:id="col_monday" prefWidth="100.0" text="Monday" />
+          <TableColumn fx:id="col_tuesday" prefWidth="100.0" text="Tuesday" />
+          <TableColumn fx:id="col_wednesday" prefWidth="100.0" text="Wednesday" />
+          <TableColumn fx:id="col_thursday" prefWidth="100.0" text="Thursday" />
+          <TableColumn fx:id="col_friday" prefWidth="100.0" text="Friday" />
+          <TableColumn fx:id="col_saturday" prefWidth="100.0" text="Saturday" />
+          <TableColumn fx:id="col_sunday" prefWidth="100.0" text="Sunday" />
+        </columns>
+      </TableView>
+      <Button layoutX="272.0" layoutY="536.0" mnemonicParsing="false" onAction="#exportToExcelSchedule" text="Export to Excel" />
+      <Button fx:id="bUpload" layoutX="451.0" layoutY="536.0" mnemonicParsing="false" onAction="#uploadSchedule" text="Upload" />
+   </children>
+</AnchorPane>

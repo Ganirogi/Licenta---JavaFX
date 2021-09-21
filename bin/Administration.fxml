@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdministrationController">
+   <children>
+      <TableView fx:id="tableProfile" layoutX="234.0" layoutY="106.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="col_username" prefWidth="135.0" text="username" />
+          <TableColumn fx:id="col_taxe" prefWidth="135.0" text="taxe" />
+          <TableColumn fx:id="col_role" prefWidth="135.0" text="role" />
+          <TableColumn fx:id="col_phonenumber" prefWidth="135.0" text="phone number" />
+          <TableColumn fx:id="col_grosssalary" prefWidth="135.0" text="grosssalary" />
+          <TableColumn fx:id="col_netsalary" prefWidth="135.0" text="netsalary" />
+        </columns>
+      </TableView>
+      <Button layoutX="94.0" layoutY="531.0" mnemonicParsing="false" onAction="#refreshProfile" text="Profile" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="50.0" />
+      <Button layoutX="227.0" layoutY="531.0" mnemonicParsing="false" onAction="#exportToExcelProfiles" text="Download profiles" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="225.0" />
+      <Button layoutX="466.0" layoutY="531.0" mnemonicParsing="false" onAction="#goToChangePassword" text="Change password" AnchorPane.bottomAnchor="44.0" AnchorPane.rightAnchor="223.0" />
+      <Button layoutX="696.0" layoutY="530.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" AnchorPane.bottomAnchor="44.0" AnchorPane.rightAnchor="50.0" />
+   </children> 
+</AnchorPane>
