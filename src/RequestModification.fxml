@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RequestModificationController">
+   <children>
+      <Button layoutX="709.0" layoutY="535.0" mnemonicParsing="false" onAction="#backToSchedule" text="Back" />
+      <TableView fx:id="tableRequests" layoutX="218.0" layoutY="128.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <columns>
+          <TableColumn fx:id="col_ID" text="ID" />
+          <TableColumn fx:id="col_username" text="username" />
+          <TableColumn fx:id="col_firstname" text="firstname" />
+          <TableColumn fx:id="col_lastname" text="lastname" />
+          <TableColumn fx:id="col_date" text="date" />
+          <TableColumn fx:id="col_schedule" text="schedule" />
+          <TableColumn fx:id="col_shortDescription" text="shortDescription" />
+          <TableColumn fx:id="col_role" text="role" />
+          <TableColumn fx:id="col_usernameAccept" text="usernameAccept" />
+          <TableColumn fx:id="col_approved" text="approved" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfIDRequest" layoutX="30.0" layoutY="14.0" promptText="ID request" AnchorPane.leftAnchor="30.0" />
+      <Button layoutX="206.0" layoutY="14.0" mnemonicParsing="false" onAction="#acceptRequest" text="Request approval" AnchorPane.rightAnchor="485.0" />
+      <TextField fx:id="tfDateRequest" layoutX="14.0" layoutY="535.0" promptText="Date" />
+      <TextField fx:id="tfScheduleRequest" layoutX="179.0" layoutY="535.0" promptText="Schedule" />
+      <TextField fx:id="tfShortDescriptionRequest" layoutX="339.0" layoutY="535.0" promptText="Request details(max 100)" />
+      <Button layoutX="519.0" layoutY="535.0" mnemonicParsing="false" onAction="#makeRequest" text="Make request" />
+      <Button fx:id="bApproveRequest" layoutX="339.0" layoutY="14.0" mnemonicParsing="false" onAction="#approveRefuseRequest" prefWidth="109.0" text="Approve" />
+      <Button layoutX="641.0" layoutY="14.0" mnemonicParsing="false" onAction="#showRequests" prefWidth="109.0" text="Show requests" />
+      <Button fx:id="bRefuseRequest" layoutX="479.0" layoutY="14.0" mnemonicParsing="false" onAction="#approveRefuseRequest" prefWidth="109.0" text="Refuse" />
+   </children>
+</AnchorPane>
